@@ -1,11 +1,16 @@
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #000000;
+    background-color: #040303;
   }
+  
+:root{
+  --succes-color: #2ecc71;;
+  --error-color: #e74c3c;
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
 /* PAGE 1 : START */
   .topnav {
@@ -361,18 +366,12 @@ img {
   background-color: gold;
 }
 
-.boxesContainer{
-  position: relative;
-  gap: 1rem; 
-  grid-row: 1 / 3;
-  padding: 10px 20px;
-  width: 20%;
-}
-
 .cardBox {
+  display:inline-block;
   font-size: 1.2em;
   margin: 2% 0 0 1%;
   transition: all 0.5s ease 0s;
+  width: 23.7%;
 }
 
 .cardBox:hover .card-9 {
@@ -387,7 +386,6 @@ img {
   height: 300px;
   transform-style: preserve-3d;
   transition: transform 0.4s ease 0s;
-  width: 100%;
   -webkit-animation: giro 1s 1;
   animation: giro 1s 1;
 }
@@ -405,7 +403,6 @@ img {
   background-size: cover;
   box-sizing: border-box;
   color: white;
-  display: block;
   font-size: 1.2em;
   height: 100%;
   padding: 0.8em;
@@ -534,7 +531,7 @@ img {
 }
 
 .cardBox:nth-child(9) .card-9 .front {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjiZi_NT7sWXPumqKWXC6wlOAa38TgkZTgxQ&usqp=CAU");
+  background-image: url("https://i8.otzovik.com/2021/01/11/11264670/img/1193326_55301693.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -623,6 +620,11 @@ img {
 /* PAGE 6 : END */
 
 /* FOOTER : START */
+.text-justify{
+  position: relative;
+  top: -2em;
+}
+
 #myBtn {
   display: none; 
   position: fixed; 
@@ -661,16 +663,7 @@ img {
   top: 12em;
   font-size:15px;
   line-height:24px;
-  color:gold;
-}
-
-.site-footer hr{
-  border-top-color:#bbb;
-  opacity:0.5
-}
-
-.site-footer hr.small{
-  margin:20px 0
+  color:rgb(255, 255, 255);
 }
 
 .site-footer h6{
@@ -684,6 +677,105 @@ img {
 .site-footer a{
   color:gold;
   text-decoration: none;
+}
+
+.container-2{
+  position: relative;
+  width: 92%;
+  top: -2em;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+h2{
+    text-align: center;
+    color: gold;
+    margin: 0 0 20px;
+}
+
+.form-control{
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.form-control label{
+  color:gold;
+  display: block;
+  margin-bottom: 5px; 
+}
+ 
+.form-control input{
+  width: 100%;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+  font-size: 14px;   
+}
+
+.form-control input:focus{
+  outline: 0;
+  border-color: rgb(102, 102, 102);
+}
+
+.form-control.success input {
+  border-color: var(--succes-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);    
+}
+
+.form-control small{
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small{
+  visibility: visible;
+}
+
+.form button{ 
+  position: relative;
+  width:50%;
+  height: auto;
+  cursor: pointer;
+  background-color: #3D0000;
+  margin: 0 auto;
+  color: #fff;
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  margin-top:20px;
+}
+
+.map{
+  display: inline;
+  width: 68%;
+  margin: 0 auto;
+}
+
+.map-responsive{
+  position: relative;
+  top: -9em;
+  overflow:hidden;
+  padding-bottom:60%;
+  height:0;
+}
+
+.map-responsive iframe{
+  position: absolute;
+  left: 0.5em;
+  top:0;
+  width:100%;
+  height:100%;
 }
 
 .footer-links{
@@ -741,12 +833,88 @@ img {
     text-align:center
   }
 }
-.social-icons
-{
-  padding-left:0;
-  margin-bottom:0;
-  list-style:none
+
+.about{
+  font-size: 1.1em;
 }
+
+.categories{
+  position: relative;
+  display: block;
+  padding: 14px;
+  float: left;
+  top: -9em;
+}
+
+.classes{
+  position: relative;
+  display: block;
+  padding: 14px;
+  float: left;
+  top: -9em;
+}
+
+.address{
+  position: relative;
+  display: block;
+  padding: 14px;
+  float: left;
+  top: -9em;
+}
+
+.quick-links{
+  position: relative;
+  display: block;
+  float: left;
+  padding: 14px;
+  top: -9em;
+}
+
+.charity{
+  position: relative;
+  display: block;
+  top: -8em;
+}
+
+.charity p{
+  position: relative;
+  font-weight: bold;
+}
+
+.the-end{
+  position: relative;
+  float: left;
+  top: -8em;
+}
+
+.site-footer hr{
+  position: relative;
+  width: 100%;
+  border-top-color:#bbb;
+  width: 100%;
+  opacity:0.5;
+  top: -9em;
+}
+
+.site-footer hr.small{
+  margin:20px 0
+}
+
+.social-links{
+  position: relative;
+  top: -8em;
+}
+
+.social-icons{
+  position: relative;
+  float: right;
+  top: 2em;
+}
+
+.footer-links :hover{
+  color: rgb(255, 1, 1);
+}
+
 .social-icons li{
   display:inline-block;
   margin-bottom:4px
